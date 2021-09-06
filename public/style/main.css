@@ -11949,7 +11949,7 @@ footer p {
     stroke-width: 0.25;
 } */
 
-svg rect:hover {
+.lahanrect:hover {
     transition: 0.6s;
     cursor: pointer;
     filter: brightness(85%);

@@ -22,11 +22,21 @@ class CreateRequestsTable extends Migration
             $table->string('judul');
             $table->date('awal_pelaksanaan');
             $table->date('akhir_pelaksanaan');
+            $table->date('tanggal_tanam');
             $table->string('blok');
             $table->string('peneliti');
 
             $table->string('areal');
             $table->string('keterangan_areal');
+
+            $table->string('komoditas');
+            $table->string('varietas');
+            $table->string('peralatan');
+            $table->integer('jumlah_peralatan');
+            $table->string('pupuk');
+            $table->string('jumlah_pupuk');
+            $table->string('sarana_lain');
+
 
             $table->string('catatan_staf_muda')->nullable();
             $table->string('catatan_vp')->nullable();

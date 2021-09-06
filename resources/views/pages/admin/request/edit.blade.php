@@ -41,6 +41,14 @@
                                             <input disabled type="text" name="judul" class="form-control" required value="{{ $item->judul }}">
                                         </div>
                                     </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Tanggal Tanam</label>
+                                            <input disabled type="email" name="akhir_pelaksanaan" class="form-control" required value="{{ $item->tanggal_tanam }}">
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Awal Pelaksanaan</label>
@@ -82,7 +90,67 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Komoditas</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->komoditas }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Varietas</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->varietas }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Peralatan</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->peralatan }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Jumlah Peralatan</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->jumlah_peralatan }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Pupuk</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->jumlah_pupuk }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Sarana Lain</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->sarana_lain }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>QRCode</label>
+                                            <p>
+                                                @if($item->status == "Disetujui") 
+                                                {{ $qrcode }}
+                                                @else
+                                                    QRcode akan muncul jika sudah disetujui
+                                                @endif
+                                            </p>
+                                            
+                                        </div>
+                                    </div>
+
+
+                                   
+
+
+                                    {{-- <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Peralatan :</label>
 
@@ -257,12 +325,12 @@
 
                                         </div>
 
-                                    </div>
+                                    </div> --}}
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Catatan</label>
-                                            <textarea name="description" id="editor"></textarea>
+                                            <textarea name="description" disabled class="form-control">{{ $item->catatan_staf_muda }}</textarea>
                                         </div>
                                     </div>
 
@@ -296,10 +364,3 @@
     </div>
     </div>
 @endsection
-
-@push('addon-scripts')
-    <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
-    <script>
-            CKEDITOR.replace('editor');
-    </script>
-@endpush

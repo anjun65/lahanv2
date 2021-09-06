@@ -18,11 +18,14 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    
+    Route::post('date/check', [App\Http\Controllers\HomeController::class, 'check'])->name('api-date-check');
 
     Route::get('/request', [App\Http\Controllers\RequestController::class, 'index'])->name('request');
     Route::post('/request', [App\Http\Controllers\RequestController::class, 'store'])->name('request-store');
     Route::get('/request/{id}', [App\Http\Controllers\RequestController::class, 'show'])->name('request-show');
 
+    Route::get('/request/pdf/{id}', [App\Http\Controllers\RequestController::class, 'generatePDF'])->name('request-pdf');
 });
 
 Route::prefix('admin')

@@ -1,11 +1,11 @@
 <!-- Navigation -->
     <nav
-      class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top"
+      class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top no-print"
       data-aos="fade-down"
     >
       <div class="container">
         <a class="navbar-brand" href="/">
-          <img style="width: 50%" src="/images/logo.svg" alt="" />
+          <img style="width: 15%" src="/images/logo.png" alt="" />
         </a>
         <button
           class="navbar-toggler"

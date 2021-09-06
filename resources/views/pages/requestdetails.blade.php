@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 col-12">
                  <br/>
-                <div class="dashboard-heading">
+                <div class="dashboard-heading no-print">
                     <h3 class="dashboard-title">Rekap Permintaan</h3>
                     <p class="dashboard-subtitle">
                         Rekap Permintaan yang telah diajukan peneliti
@@ -21,9 +21,9 @@
                  <br/>
                 <div class="card">
                     <div class="card-body">
-                        <div class="row">
+                        <div class="row no-print">
                             <div class="col text-right">
-                                <button class="btn btn-primary px-5">
+                                <button onclick="test_print()" class="btn btn-primary px-5">
                                     Print As document
                                 </button>
                             </div>
@@ -36,6 +36,14 @@
                                             <input disabled type="text" name="judul" class="form-control" required value="{{ $item->judul }}">
                                         </div>
                                     </div>
+
+                                     <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Tanggal Tanam</label>
+                                            <input disabled type="email" name="akhir_pelaksanaan" class="form-control" required value="{{ $item->tanggal_tanam }}">
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Awal Pelaksanaan</label>
@@ -77,7 +85,52 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Komoditas</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->komoditas }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Varietas</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->varietas }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Peralatan</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->peralatan }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Jumlah Peralatan</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->jumlah_peralatan }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Pupuk</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->jumlah_pupuk }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Sarana Lain</label>
+                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->sarana_lain }}">
+                                        </div>
+                                    </div>
+
+
+
+
+                                    {{-- <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Peralatan :</label>
 
@@ -252,36 +305,36 @@
 
                                         </div>
 
+                                    </div> --}}
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Qrcode</label>
+                                            <p>
+                                                @if($item->status == "Disetujui") 
+                                                    {{ $qrcode }}
+                                                @else
+                                                    QRcode akan muncul jika sudah disetujui
+                                                @endif
+                                            </p>
+                                        </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Catatan</label>
-                                            <input disabled type="text" name="catatan" value="{{ $item->catatan_staf_muda }}" class="form-control mb-3">
+                                            <textarea name="description" disabled class="form-control">{{ $item->catatan_staf_muda }}</textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Status</label>
-                                            <select name="status" required class="form-control">
-                                                <option value="{{  $item->status }}" selected>Tidak diganti</option>
-                                                <option value="Diajukan">Diajukan</option>
-                                                <option value="Disetujui">Disetujui</option>
-                                                <option value="Revisi">Revisi</option>
-                                            </select>
+                                            <input disabled type="text" name="status" value="{{ $item->status }}" class="form-control mb-3">
                                         </div>
                                     </div>
                                 </div>
 
-
-                                <div class="row">
-                                    <div class="col text-right">
-                                        <button class="btn btn-success px-5">
-                                            Save now
-                                        </button>
-                                    </div>
-                                </div>
                             </form>
                     </div>
                 </div>
@@ -291,3 +344,21 @@
 </div>
 
 @endsection
+
+@push('addon-scripts')
+    <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
+    <script>
+            CKEDITOR.replace('editor');
+    </script>
+    <script>
+
+        function test_print() {
+
+            $('.no-print').hide();
+
+            window.print();
+        }
+        
+         
+    </script>
+@endpush

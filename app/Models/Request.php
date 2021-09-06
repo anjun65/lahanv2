@@ -15,11 +15,22 @@ class Request extends Model
         'judul',
         'awal_pelaksanaan',
         'akhir_pelaksanaan',
+        'tanggal_tanam',
         'blok',
         'areal',
         'keterangan_areal',
         'peneliti',
-        'details_id',
+        'komoditas',
+        'varietas',
+        'peralatan',
+        'jumlah_peralatan',
+        'pupuk',
+        'jumlah_pupuk',
+        'pupuk',
+        'jumlah_pupuk',
+        'sarana_lain',
+        'blok_details',
+
         'catatan_staf_muda',
         'catatan_vp',
         'status',
@@ -34,8 +45,8 @@ class Request extends Model
         return $this->hasOne(User::class, 'id', 'peneliti');
     }
 
-    public function details()
-    {
-        return $this->hasOne(RequestDetail::class, 'request_id', 'id');
-    }
+    // public function details()
+    // {
+    //     return $this->hasOne(RequestDetail::class, 'request_id', 'id');
+    // }
 }
