@@ -1402,7 +1402,7 @@
                             </div>
 
                             <div class="col-md-12" id="check_tersedia">
-                                <div class="alert alert-warning">
+                                <div class="alert alert-danger tanggal-warning">
                                     Tampaknya ada yang salah dengan tanggal tanam/awal pelaksanaan/akhir pelaksanaan.
                                 </div>
 
@@ -1758,6 +1758,12 @@
                     $('.alert-warning').hide();
                   }
 
+                  if ($('input[name="awal_date"]').val() > $('input[name="akhir_date"]').val()){
+                    $('.tanggal-warning').show();
+                  } else {
+                    $('.tanggal-warning').hide();
+                  }
+
                   if (response.data == 'Tidak Tersedia'){
                     $('.alert-danger').show();
                     $('.alert-success').hide();
@@ -1771,6 +1777,7 @@
                     $('.alert-danger').hide();
                     $('.alert-success').show();
                     $('button[type="submit"]').removeAttr('disabled');
+                    console.log(response.data);
                   }
                 })
                 .catch(function (error) {

@@ -50,7 +50,7 @@ class RequestController extends Controller
         if ($request->has('keterangan_tambahan')){
             $keterangan = $request->keterangan_tambahan;
         } else {
-            $keterangan = Str::upper($request->panjang).' m x '.Str::upper($request->lebar).' m';
+            $keterangan = $request->panjang * $request->lebar;
         }
         
         $blok_details = $request->blok_details;
@@ -133,17 +133,19 @@ class RequestController extends Controller
         // // ]);
         // return $pdf->download('test.pdf');
 
-
+        
         $item = RequestModel::findorFail($id);
+        
         view()->share('item',$item);
 
-        $pdf = PDF::loadView('pages.requestpdf', $item);
-        
-        // return view('pages.requestpdf', [
-        //     'item' => $item
-        // ]);
+        $pdf = PDF::loadView('pages.requestpdf', $item)->setPaper('a4')->setOption('margin-bottom', 0);
 
-        return $pdf->download('userlist.pdf');
+
+        //$pdf = PDF::loadView('pages.requestpdf', $item);
+        // $pdf->save(storage_path().'/pdf/uniquename.pdf');
+
+        // return $pdf->download($item->judul.'.pdf');
+        return $pdf->stream();
     }
 
 }

@@ -15,6 +15,9 @@
     @stack('prepend-style')
     {{-- @include('includes.style') --}}
     @stack('addon-style')
+
+    <link href="{{ asset('/style/main.css') }}" rel="stylesheet"/>
+    
   </head>
 
   <body>

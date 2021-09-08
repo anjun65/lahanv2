@@ -23,9 +23,14 @@
                     <div class="card-body">
                         <div class="row no-print">
                             <div class="col text-right">
-                                <button onclick="test_print()" class="btn btn-primary px-5">
+                                {{-- <button onclick="test_print()" class="btn btn-primary px-5">
                                     Print As document
-                                </button>
+                                </button> --}}
+
+                                
+                                <a href="{{ route('request-pdf', $item->id) }}" class="btn btn-primary px-5">
+                                    Print As document
+                                </a>
                             </div>
                         </div>
                         <form action="" method="POST" enctype="multipart/form-data">

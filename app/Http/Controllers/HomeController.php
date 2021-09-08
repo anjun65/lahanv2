@@ -54,35 +54,39 @@ class HomeController extends Controller
             // $check_akhir = RequestModel::whereRaw("? NOT BETWEEN awal_pelaksanaan AND akhir_pelaksanaan", [$request->akhir_date])
             //                 ->whereRaw("? NOT BETWEEN awal_pelaksanaan AND akhir_pelaksanaan", [$request->awal_date])
             //                 ->whereOr('block_details','like', '%'.$blokArray .'%')->count();
+            // $check_awal = '';
 
-
-            $check_awal = RequestModel::whereBetween('awal_pelaksanaan', [$request->awal_date, $request->akhir_date])->get();
+            $check_awal = RequestModel::whereBetween('awal_pelaksanaan', [$request->awal_date, $request->akhir_date])
+                          ->where('blok_details', 'like', '%'.$blokArray.'%')->count();
             
-            // if (!empty($check_awal)){
-                // if (str_contains($check_awal->block_details, $blokArray)){
-                    // return 'Tidak Tersedia';
-                }
+
+            // if(!empty($check_awal)){
+            //     if (str_contains($check_awal->block_details, $blokArray)){
+            //         return $check_awal->block_details;
+            //     }
             // }
 
-            // if ($check_awal > 0){
-            //     return 'Tidak Tersedia';
-            // }
+            if ($check_awal > 0){
+                return 'Tidak Tersedia';
+            }
 
 
-            $check_akhir = RequestModel::whereBetween('akhir_pelaksanaan', [$request->awal_date, $request->akhir_date]);
+            $check_akhir = RequestModel::whereBetween('akhir_pelaksanaan', [$request->awal_date, $request->akhir_date])
+                            ->where('blok_details', 'like', '%'.$blokArray.'%')->count();;
 
             // if (!empty($check_akhir)){
-                // if (str_contains($check_akhir->block_details, $blokArray)){
-                    // return 'Tidak Tersedia';
-                // }
+            //     if (str_contains($check_akhir->block_details, $blokArray)){
+            //         return 'Tidak Tersedia';
+            //     }
             // }
+
             // $check_awal = RequestModel::where('awal_pelaksanaan', '>', $request->akhir_date)
             //             ->where('awal_pelaksanaan', '>', $request->awal_date)
             //             ->whereOr('block_details','like', '%'.$blokArray .'%')->count();
 
-            // if ($check_awal > 0){
-            //     return 'Tidak Tersedia';
-            // }
+            if ($check_akhir > 0){
+                return 'Tidak Tersedia';
+            }
         }
 
         return 'Tersedia';

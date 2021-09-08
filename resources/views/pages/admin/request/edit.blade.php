@@ -330,7 +330,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Catatan</label>
-                                            <textarea name="description" disabled class="form-control">{{ $item->catatan_staf_muda }}</textarea>
+                                            <textarea name="description" class="form-control">{{ $item->catatan_staf_muda }}</textarea>
                                         </div>
                                     </div>
 
