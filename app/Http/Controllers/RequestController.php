@@ -71,7 +71,6 @@ class RequestController extends Controller
             'komoditas' =>  $request->komoditas,
             'varietas' =>  $request->varietas,
             'peralatan' =>  $request->peralatan,
-            'peralatan' =>  $request->peralatan,
             'jumlah_peralatan' =>  $request->jumlah_peralatan,
             'pupuk' =>  $request->pupuk,
             'jumlah_pupuk' =>  $request->jumlah_pupuk,

@@ -2278,6 +2278,10 @@ pre code {
     .table-responsive-sm > .table-bordered {
         border: 0;
     }
+
+    .page-auth {
+        background-size: 100% !important;
+    }
 }
 
 @media (max-width: 767.98px) {

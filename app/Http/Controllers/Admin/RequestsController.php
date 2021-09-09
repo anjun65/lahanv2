@@ -21,7 +21,7 @@ class RequestsController extends Controller
     {
         if(request()->ajax())
         {
-            $query = Request::query();
+            $query = Request::with(['user'])->query();
             return Datatables::of($query)
                 ->addcolumn('action', function($item) {
                     return '

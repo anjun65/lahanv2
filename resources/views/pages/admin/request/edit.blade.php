@@ -329,6 +329,20 @@
 
                                     <div class="col-md-12">
                                         <div class="form-group">
+                                            <label>Nomor</label>
+                                            <input type="text" name="nomor" class="form-control" required value="{{ $item->nomor }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Tanggal</label>
+                                            <input type="text" name="nomor" class="form-control" required value="{{ $item->tanggal }}">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-12">
+                                        <div class="form-group">
                                             <label>Catatan</label>
                                             <textarea name="description" class="form-control">{{ $item->catatan_staf_muda }}</textarea>
                                         </div>

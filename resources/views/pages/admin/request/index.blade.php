@@ -61,7 +61,7 @@
                 {data: 'judul', name:'judul'},
                 {data: 'awal_pelaksanaan', name:'awal_pelaksanaanemail'},
                 {data: 'akhir_pelaksanaan', name:'akhir_pelaksanaan'},
-                {data: 'peneliti', name:'peneliti'},
+                {data: 'user.name', name:'user.name'},
                 {data: 'blok', name:'blok'},
                 {
                     data: 'action',

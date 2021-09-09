@@ -5,7 +5,7 @@
     <div class="section-store-auth" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center row-login">
-                <div class="col-6 col-md-6 col-lg-6 offset-3 text-center">
+                <div class="offset-sm-2 col-sm-10 col-md-6 col-lg-6 offset-md-3 text-center">
                     <h2>
                         Petrokimia
                     </h2>

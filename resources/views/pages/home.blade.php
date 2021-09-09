@@ -866,24 +866,24 @@
                                 @if(!empty($RK301))
                                     <rect data-toggle="popover" booked="yes" data-container="body" title="Status Lahan" data-content="{{ $new_RK301 }}" data-placement="right" data-bs-trigger="hover focus" areal="Rumah Kaca" name="RK301" blok="RK3" pilih="no" panjang="20" lebar="20" class="cls-14 lahanrect" x="140.06" y="491.36" width="83.14" height="61.67"/>
                                 @else
-                                    <rect areal="Rumah Kaca" name="RK301" blok="RK3" pilih="no" panjang="20" lebar="20" class="cls-14 lahanrect" x="140.06" y="491.36" width="83.14" height="61.67"/>
+                                    <rect areal="Rumah Kaca" name="RK301" blok="RK3" pilih="no" panjang="1" lebar="1" class="cls-14 lahanrect" x="140.06" y="491.36" width="83.14" height="61.67"/>
                                 @endif
                                 @if(!empty($K301))
                                     <rect data-toggle="popover" booked="yes" data-container="body" title="Status Lahan" data-content="{{ $new_K301 }}" data-placement="right" data-bs-trigger="hover focus" areal="Lahan kering" name="K301" blok="K3" pilih="no" panjang="21" lebar="19" class="cls-6 lahanrect" x="281.62" y="322.21" width="77.12" height="72.06"/>
                                 @else 
-                                    <rect areal="Lahan kering" name="K301" blok="K3" pilih="no" panjang="21" lebar="19" class="cls-6 lahanrect" x="281.62" y="322.21" width="77.12" height="72.06"/>
+                                    <rect areal="Lahan kering" name="K301" blok="K3" pilih="no" panjang="1" lebar="1" class="cls-6 lahanrect" x="281.62" y="322.21" width="77.12" height="72.06"/>
                                 @endif
                                 
                                 @if(!empty($RK101))
-                                    <rect data-toggle="popover" booked="yes" data-container="body" title="Status Lahan" data-content="{{ $new_RK101 }}" data-placement="right" data-bs-trigger="hover focus" areal="Rumah Kaca" name="RK101" blok="RK1" pilih="no" panjang="15" lebar="10" class="cls-14 lahanrect" x="213.86" y="214.43" width="53.79" height="33.55" transform="translate(100.12 -85.27) rotate(22.28)"/>
+                                    <rect data-toggle="popover" booked="yes" data-container="body" title="Status Lahan" data-content="{{ $new_RK101 }}" data-placement="right" data-bs-trigger="hover focus" areal="Rumah Kaca" name="RK101" blok="RK1" pilih="no" panjang="1" lebar="1" class="cls-14 lahanrect" x="213.86" y="214.43" width="53.79" height="33.55" transform="translate(100.12 -85.27) rotate(22.28)"/>
                                 @else
-                                    <rect areal="Rumah Kaca" name="RK101" blok="RK1" pilih="no" panjang="15" lebar="10" class="cls-14 lahanrect" x="213.86" y="214.43" width="53.79" height="33.55" transform="translate(100.12 -85.27) rotate(22.28)"/>
+                                    <rect areal="Rumah Kaca" name="RK101" blok="RK1" pilih="no" panjang="1" lebar="1" class="cls-14 lahanrect" x="213.86" y="214.43" width="53.79" height="33.55" transform="translate(100.12 -85.27) rotate(22.28)"/>
                                 @endif
 
                                 @if(!empty($RK201))
-                                    <rect data-toggle="popover" booked="yes" data-container="body" title="Status Lahan" data-content="{{ $new_RK201 }}" data-placement="right" data-bs-trigger="hover focus" areal="Rumah Kaca" name="RK201" blok="RK1" pilih="no" panjang="15" lebar="10" class="cls-14 lahanrect" x="161.81" y="190.82" width="53.79" height="33.55" transform="translate(87.28 -67.3) rotate(22.28)"/>
+                                    <rect data-toggle="popover" booked="yes" data-container="body" title="Status Lahan" data-content="{{ $new_RK201 }}" data-placement="right" data-bs-trigger="hover focus" areal="Rumah Kaca" name="RK201" blok="RK1" pilih="no" panjang="1" lebar="1" class="cls-14 lahanrect" x="161.81" y="190.82" width="53.79" height="33.55" transform="translate(87.28 -67.3) rotate(22.28)"/>
                                 @else
-                                    <rect areal="Rumah Kaca" name="RK201" blok="RK2" pilih="no" panjang="15" lebar="10" class="cls-14 lahanrect" x="161.81" y="190.82" width="53.79" height="33.55" transform="translate(87.28 -67.3) rotate(22.28)"/>
+                                    <rect areal="Rumah Kaca" name="RK201" blok="RK2" pilih="no" panjang="1" lebar="1" class="cls-14 lahanrect" x="161.81" y="190.82" width="53.79" height="33.55" transform="translate(87.28 -67.3) rotate(22.28)"/>
                                 @endif
                                 
 
@@ -1961,7 +1961,7 @@
             });
 
             $('#select_benih').change(function() {
-                if($("#select_benih option:selected").text() == "Lainnya"){
+                if($("#select_benih option:selected").text() == "Lain-lain"){
                     $("#pupuk_lainnya").removeAttr('disabled');
                     $('#pupuk_lainnya').show();
                     $('#jumlah_pupuk').show();
