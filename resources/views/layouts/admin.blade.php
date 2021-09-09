@@ -21,9 +21,9 @@
     <div class="page-dashboard">
       <div class="d-flex" id="wrapper" data-aos="fade-right">
         <!-- Sidebar -->
-        <div class="border-right" id="sidebar-wrapper">
+        <div class="border-right wrapper-test" id="sidebar-wrapper">
           <div class="sidebar-heading text-center">
-            <img style="width: 15%" src="/images/logo.png" alt="" class="my-4" />
+            <img style="width: 100%" src="/images/logo.png" alt="" class="my-4" />
           </div>
           <div class="list-group list-group-flush">
             <a
