@@ -1410,7 +1410,7 @@
                                     Silahkan pilih blok terlebih dahulu lalu set tanggalnya.
                                 </div>
 
-                                <div class="alert alert-danger">
+                                <div class="alert alert-danger booking-danger">
                                     Blok telah disetujui pada tanggal tersebut. Harap mengecek Tanggal awal pelaksanaan dan akhir pelaksanaan
                                 </div>
 
@@ -1491,8 +1491,8 @@
                                         <option value="Urea">Urea</option>
                                         <option value="ZA">ZA</option>
                                         <option value="ZK">ZK</option>
-                                        <option value="Urea">KCI</option>
-                                        <option value="Urea">Lainnya</option>
+                                        <option value="KCI">KCI</option>
+                                        <option value="Lain-lain">Lain-lain</option>
                                     </select>
                                     <input type="text" name="pupuk" disabled placeholder="Masukkan Nama Pupuk" id="pupuk_lainnya" class="form-control mt-2">
                                 </div>
@@ -1744,45 +1744,50 @@
 
         $('.date_check').change(function(){
             clearTimeout(tId);
-
+            
             tId = setTimeout(function(){                 
-                axios.post('{{ route('api-date-check') }}', {
-                    awal_date: $('input[name="awal_date"]').val(),
-                    akhir_date : $('input[name="akhir_date"]').val(),
-                    blok_details : $('input[name="blok_details"]').val(),
-                })
-                .then(function (response) {
-                  if ($('input[name="awal_date"]').val() > $('input[name="tanam_date"]').val() && $('input[name="akhir_date"]').val() < $('input[name="tanam_date"]').val()){
-                    $('.alert-warning').show();
-                  } else {
-                    $('.alert-warning').hide();
-                  }
-
-                  if ($('input[name="awal_date"]').val() > $('input[name="akhir_date"]').val()){
+                if ($('input[name="awal_date"]').val() > $('input[name="tanam_date"]').val() || $('input[name="akhir_date"]').val() < $('input[name="tanam_date"]').val()){
+                    console.log('show');
                     $('.tanggal-warning').show();
                   } else {
+                    console.log('hide');
                     $('.tanggal-warning').hide();
                   }
 
-                  if (response.data == 'Tidak Tersedia'){
-                    $('.alert-danger').show();
-                    $('.alert-success').hide();
-                    $('button[type="submit"]').attr('disabled','disabled');
-                  } 
-                  else if (response.data == 'Pilih'){
-                    $('.pilih-warning').show();
-                    $('button[type="submit"]').attr('disabled','disabled');
-                  }
-                  else {
-                    $('.alert-danger').hide();
-                    $('.alert-success').show();
-                    $('button[type="submit"]').removeAttr('disabled');
-                    console.log(response.data);
-                  }
-                })
-                .catch(function (error) {
-                  console.log("error");
-                });
+                if ($('input[name="awal_date"]').val() > $('input[name="akhir_date"]').val()){
+                    $('.tanggal-warning').show();
+                } else {
+                    $('.tanggal-warning').hide();
+                }
+
+                if ($('input[name="awal_date"]').val() < $('input[name="akhir_date"]').val()){
+                    axios.post('{{ route('api-date-check') }}', {
+                        awal_date: $('input[name="awal_date"]').val(),
+                        akhir_date : $('input[name="akhir_date"]').val(),
+                        blok_details : $('input[name="blok_details"]').val(),
+                    })
+                    .then(function (response) {
+                    
+                    if (response.data == 'Tidak Tersedia'){
+                        $('.booking-danger').show();
+                        $('.alert-success').hide();
+                        $('button[type="submit"]').attr('disabled','disabled');
+                    } 
+                    else if (response.data == 'Pilih'){
+                        $('.pilih-warning').show();
+                        $('button[type="submit"]').attr('disabled','disabled');
+                    }
+                    else {
+                        $('.booking-danger').hide();
+                        $('.alert-success').show();
+                        $('button[type="submit"]').removeAttr('disabled');
+                        console.log(response.data);
+                    }
+                    })
+                    .catch(function (error) {
+                    console.log("error");
+                    });
+                }
                 
             },750);
 
