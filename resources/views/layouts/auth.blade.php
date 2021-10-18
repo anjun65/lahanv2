@@ -28,7 +28,7 @@
 
 
     {{-- Footer --}}
-    @include('includes.footer')
+    {{-- @include('includes.footer') --}}
 
     {{-- Bootstrap core JavaScript --}}
     @stack('prepend-scripts')

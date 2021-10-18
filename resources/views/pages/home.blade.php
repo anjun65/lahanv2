@@ -14,7 +14,7 @@
     <div class="page-content page-home">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-lg-12 col-12">
+                <div class="col-md-12 col-lg-12 col-12 form-1">
                     
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 829.56 574.06">
                         <defs>
@@ -93,44 +93,45 @@
                                     $RK101= array();
                                     $RK201= array();
                                     $RK301= array();
+                                    $RK401= array();
                                 @endphp
 
                                 @foreach ($item as $item)
 
                                     @if(str_contains($item->blok_details, 'B201'))
                                         @php
-                                            array_push($B201, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($B201, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'B202'))
                                         @php
-                                            array_push($B202, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($B202, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'B203'))
                                         @php
-                                            array_push($B203, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($B203, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
 
                                     @if(str_contains($item->blok_details, 'C301'))
                                         @php
-                                            array_push($C301, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C301, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C302'))
                                         @php
-                                            array_push($C302, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C302, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C303'))
                                         @php
-                                            array_push($C303, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C303, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
@@ -138,247 +139,247 @@
 
                                     @if(str_contains($item->blok_details, 'C401'))
                                         @php
-                                            array_push($C401, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C401, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C402'))
                                         @php
-                                            array_push($C402, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C402, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C403'))
                                         @php
-                                            array_push($C403, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C403, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C404'))
                                         @php
-                                            array_push($C404, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C404, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C405'))
                                         @php
-                                            array_push($C405, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C405, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C406'))
                                         @php
-                                            array_push($C406, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C406, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C407'))
                                         @php
-                                            array_push($C407, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C407, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C408'))
                                         @php
-                                            array_push($C408, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C408, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C409'))
                                         @php
-                                            array_push($C409, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C409, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C410'))
                                         @php
-                                            array_push($C410, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C410, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C411'))
                                         @php
-                                            array_push($C411, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C411, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C412'))
                                         @php
-                                            array_push($C412, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C412, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C413'))
                                         @php
-                                            array_push($C413, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C413, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
                                     
                                     @if(str_contains($item->blok_details, 'C414'))
                                         @php
-                                            array_push($C414, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C414, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C415'))
                                         @php
-                                            array_push($C415, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C415, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C416'))
                                         @php
-                                            array_push($C416, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C416, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
 
                                     @if(str_contains($item->blok_details, 'C417'))
                                         @php
-                                            array_push($C417, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C417, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C418'))
                                         @php
-                                            array_push($C418, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C418, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C419'))
                                         @php
-                                            array_push($C419, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C419, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C420'))
                                         @php
-                                            array_push($C420, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C420, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C421'))
                                         @php
-                                            array_push($C421, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C421, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C422'))
                                         @php
-                                            array_push($C422, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C422, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C423'))
                                         @php
-                                            array_push($C423, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C423, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C424'))
                                         @php
-                                            array_push($C424, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C424, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C425'))
                                         @php
-                                            array_push($C425, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C425, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C426'))
                                         @php
-                                            array_push($C426, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C426, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C427'))
                                         @php
-                                            array_push($C427, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C427, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C428'))
                                         @php
-                                            array_push($C428, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C428, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
                                     
                                     @if(str_contains($item->blok_details, 'C429'))
                                         @php
-                                            array_push($C429, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C429, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C430'))
                                         @php
-                                            array_push($C430, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C430, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C431'))
                                         @php
-                                            array_push($C431, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C431, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C432'))
                                         @php
-                                            array_push($C432, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C432, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C433'))
                                         @php
-                                            array_push($C433, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C433, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
                                     @if(str_contains($item->blok_details, 'C434'))
                                         @php
-                                            array_push($C433, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C433, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C435'))
                                         @php
-                                            array_push($C433, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C433, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'C436'))
                                         @php
-                                            array_push($C433, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($C433, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K101'))
                                         @php
-                                            array_push($K101, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K101, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K201'))
                                         @php
-                                            array_push($K201, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K201, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K301'))
                                         @php
-                                            array_push($K301, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K301, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K401'))
                                         @php
-                                            array_push($K401, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K401, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K402'))
                                         @php
-                                            array_push($K402, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K402, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
@@ -390,73 +391,79 @@
 
                                     @if(str_contains($item->blok_details, 'K404'))
                                         @php
-                                            array_push($K404, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K404, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K405'))
                                         @php
-                                            array_push($K405, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K405, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K406'))
                                         @php
-                                            array_push($K406, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K406, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K501'))
                                         @php
-                                            array_push($K501, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K501, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K502'))
                                         @php
-                                            array_push($K502, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K502, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
                                     
                                     @if(str_contains($item->blok_details, 'K601'))
                                         @php
-                                            array_push($K601, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K601, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K701'))
                                         @php
-                                            array_push($K701, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K701, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K801'))
                                         @php
-                                            array_push($K801, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K801, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'K901'))
                                         @php
-                                            array_push($K901, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($K901, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'RK101'))
                                         @php
-                                            array_push($RK101, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($RK101, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'RK201'))
                                         @php
-                                            array_push($RK201, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($RK201, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
 
                                     @if(str_contains($item->blok_details, 'RK301'))
                                         @php
-                                            array_push($RK301, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                            array_push($RK301, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
+                                        @endphp
+                                    @endif
+
+                                    @if(str_contains($item->blok_details, 'RK401'))
+                                        @php
+                                            array_push($RK401, "Peneliti : ".$item->user->name."<br/>Judul : ".$item->judul."<br/>Awal Pelaksanaan : ".$item->awal_pelaksanaan."<br/>Akhir Pelaksanaan : ".$item->akhir_pelaksanaan);
                                         @endphp
                                     @endif
                                 @endforeach
@@ -522,6 +529,11 @@
                                     $new_K701 = implode("<br/><br/>",$K701 );
                                     $new_K801 = implode("<br/><br/>",$K801);
                                     $new_K901 = implode("<br/><br/>",$K901);
+
+                                    $new_RK401 = implode("<br/><br/>",$RK401);
+                                    $new_RK301 = implode("<br/><br/>",$RK301);
+                                    $new_RK201 = implode("<br/><br/>",$RK201);
+                                    $new_RK101 = implode("<br/><br/>",$RK101);
 
                                 @endphp
 
@@ -850,8 +862,17 @@
                                 @else 
                                     <rect areal="Lahan sawah/lahan basah" name="B203" blok="B2" pilih="no" panjang="18" lebar="13" class="cls-8 lahanrect" x="293.74" y="246.56" width="66.96" height="59.5"/>
                                 @endif
+                                
 
-                                <rect class="cls-9" x="140.39" y="265.51" width="131.88" height="99.56"/>
+                                
+                                @if(!empty($new_RK401))
+                                    <rect data-toggle="popover" booked="yes" data-container="body" title="Status Lahan" data-content="{{ $new_RK401 }}" data-placement="right" data-bs-trigger="hover focus"  areal="Rumah Kaca" name="RK401" blok="RK3" pilih="no" panjang="1" lebar="1" class="cls-9 lahanrect" x="140.39" y="265.51" width="131.88" height="99.56"/>
+                                @else
+                                    <rect areal="Rumah Kaca" name="RK401" blok="RK3" pilih="no" panjang="1" lebar="1" class="cls-9 lahanrect" x="140.39" y="265.51" width="131.88" height="99.56"/>
+                                @endif
+
+
+
                                 <rect class="cls-10" x="203.15" y="372.87" width="69.47" height="21.39"/>
                                 <rect class="cls-11" x="1.85" y="52.3" width="80.41" height="153.33"/>
                                 <rect class="cls-11" x="1.85" y="214.28" width="80.41" height="46.4"/>
@@ -1328,45 +1349,53 @@
                             </ul>
                         </div>
                     @endif
+
+                    
+                    <button onclick="$('.form-1').show(); $('.form-2').hide();"
+                        class="btn-kembali btn btn-primary nav-link px-4 text-white btn-block mt-3 mb-3 form-2"
+                        >Sebelumnya</button>
+
                     <form action="{{ route('request-store')}}" method="POST" enctype="multipart/form-data">
                       @csrf
-                        <div class="form-group">
+                        
+
+                        <div class="form-group form-1">
                             <label>Areal :</label>
                             <input required type="text" name="areal" class="form-control" readonly>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-1">
                             <label>Blok yang terpilih :</label>
                             <input required type="text" name="blok" class="form-control" readonly>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-1">
                             <label>Blok Details :</label>
                             <input required type="text" name="blok_details" class="form-control" readonly>
                         </div>
 
                         
-                        <div class="form-group reverse_keterangan">
+                        <div class="form-group reverse_keterangan form-1">
                             <label>Panjang :</label>
                             <input required type="text" name="panjang" class="form-control" readonly>
                         </div>
 
-                        <div class="form-group reverse_keterangan">
+                        <div class="form-group reverse_keterangan form-1">
                             <label>Lebar :</label>
                             <input required type="text" name="lebar" class="form-control" readonly>
                         </div>
 
-                        <div class="form-group" id="keterangan_tambahan">
+                        <div class="form-group form-1" id="keterangan_tambahan">
                             <label>Keterangan:</label>
                             <input required type="text" name="keterangan_tambahan" class="form-control" readonly>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-2">
                             <label>Judul Kegiatan:</label>
                             <input required type="text" name="judul" class="form-control">
                         </div>
                         
-                        <div class="row mb-2">
+                        <div class="row mb-2 form-1">
                             <div class="col-md-12">
                                 <div class="form-group">
                                 <label for="datepicker_tanam">Tanggal Tanam</label>
@@ -1431,7 +1460,7 @@
                         </div> --}}
 
                         <div class="row mb-2">
-                            <div class="col-md-6">
+                            <div class="col-md-6 form-2">
                                 <div class="form-group">
                                     <label>Komoditas:</label>
                                     <select name="komoditas" id="select_komoditas" class="form-control">
@@ -1450,7 +1479,7 @@
                                 </div>
                             </div>
                             
-                            <div class="col-md-6">
+                            <div class="col-md-6 form-2">
                                 <div class="form-group">
                                     <label>Varietas:</label>
                                     <input required type="text" name="varietas" class="form-control">
@@ -1460,7 +1489,7 @@
 
 
                         <div class="row mb-2">
-                            <div class="col-md-12">
+                            <div class="col-md-12 form-2">
                                 <div class="form-group">
                                     <label>Peralatan:</label>
                                     <select name="peralatan" id="select_peralatan" class="form-control">
@@ -1472,7 +1501,7 @@
                                 </div>
                             </div>
                             
-                            <div class="col-md-12">
+                            <div class="col-md-12 form-2">
                                 <div class="form-group" id="jumlah_peralatan">
                                     <label>Jumlah Peratalan:</label>
                                     <input type="text" placeholder="Masukkan Jumlah Peralatan" name="jumlah_peralatan" class="form-control">
@@ -1480,7 +1509,136 @@
                             </div>
                         </div>
 
-                        <div class="row mb-2">
+                        <div class="form-group form-2">
+                            <label>Benih dan Pupuk :</label>
+
+                            <div class="input-group mb-3">
+                                <div class="form-check mb-3 mr-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="check_benih">
+                                        <label class="form-check-label" for="check_benih">
+                                            Benih
+                                        </label>
+                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_benih" class="form-control">
+                                </div>
+
+                                <div class="form-check mb-3 mr-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="check_petroganik">
+                                        <label class="form-check-label" for="check_petroganik">
+                                            Petroganik
+                                        </label>
+                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_petroganik" class="form-control">
+                                </div>
+
+                                <div class="form-check mb-3 mr-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="check_phonska">
+                                        <label class="form-check-label" for="check_phonska">
+                                            Phonska
+                                        </label>
+                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_phonska" class="form-control">
+                                </div>
+
+                                <div class="form-check mb-3 mr-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="check_urea">
+                                        <label class="form-check-label" for="check_urea">
+                                            Urea
+                                        </label>
+                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_urea" class="form-control">
+                                </div>
+
+                                <div class="form-check mb-3 mr-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="check_za">
+                                        <label class="form-check-label" for="check_za">
+                                            ZA
+                                        </label>
+                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_za" class="form-control">
+                                </div>
+
+                                <div class="form-check mb-3 mr-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="check_zk">
+                                        <label class="form-check-label" for="check_zk">
+                                            ZK
+                                        </label>
+                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_zk" class="form-control">
+                                </div>
+
+                                <div class="form-check mb-3 mr-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="check_kci">
+                                        <label class="form-check-label" for="check_kci">
+                                            KCI
+                                        </label>
+                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_kci" class="form-control">
+                                </div>
+
+                                <div class="form-check mb-3 mr-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="check_lain">
+                                        <label class="form-check-label" for="check_lain">
+                                            Lainnya
+                                        </label>
+                                        <input disabled type="text" placeholder="Keterangan" name="benih_lain" class="form-control mb-3">
+                                        <input disabled type="number" placeholder="Jumlah" name="jumlah_lain" class="form-control mb-3">
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <div class="form-group form-2">
+                            <label>Sarana Lain :</label>
+
+                            <div class="input-group mb-3">
+                                <div class="form-check mb-3 mr-4">
+                                    <input class="form-check-input" type="checkbox" value="false" name="pestisida" id="check_pestisida">
+                                        <label class="form-check-label" for="check_pestisida">
+                                            Pestisida sesuai kebutuhan
+                                        </label>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="form-check mb-3 mr-4">
+                                    <input class="form-check-input" type="checkbox" value="" name="herbisida" id="check_herbisida">
+                                        <label class="form-check-label" for="check_herbisida">
+                                            Herbisida sesuai kebutuhan
+                                        </label>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="form-check mb-3 mr-4">
+                                    <input class="form-check-input" type="checkbox" value="" name="fungisida" id="check_fungisida">
+                                        <label class="form-check-label" for="check_fungisida">
+                                            Fungisida sesuai kebutuhan
+                                        </label>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="form-check mb-3 mr-4">
+                                    <input class="form-check-input" type="checkbox" value="" name="plastik_barrier" id="check_plastik">
+                                        <label class="form-check-label" for="check_plastik">
+                                            Plastik Barier
+                                        </label>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="form-check mb-3 mr-4">
+                                    <input class="form-check-input" type="checkbox" value="" name="jaring_burung" id="check_jaring">
+                                        <label class="form-check-label" for="check_jaring">
+                                            Jaring Burung
+                                        </label>
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-3 mr-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="check_sarana_lain">
+                                        <label class="form-check-label" for="check_sarana_lain">
+                                            Lainnya
+                                        </label>
+                                        <input type="text" placeholder="Keterangan" name="sarana_lain" class="form-control mb-3">
+                                </div>
+                        </div>
+
+                        {{-- <div class="row mb-2">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Benih dan Pupuk :</label>
@@ -1504,9 +1662,9 @@
                                     <input required type="number" placeholder="Masukkan Jumlah Pupuk (Kg)"  name="jumlah_pupuk" class="form-control">
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         
-                        <div class="row mb-2">
+                        {{-- <div class="row mb-2">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Sarana Lainnya</label>
@@ -1521,7 +1679,7 @@
                                     <input type="text" name="sarana" disabled placeholder="Masukkan Sarana Lainnya" id="sarana_lainnya" class="form-control mt-2">
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
 
                         {{-- <div class="form-group">
@@ -1694,14 +1852,18 @@
                                 </div>
                         </div> --}}
 
-
+                      
+                      
                       <button
                         type="submit"
-                        class="btn btn-success nav-link px-4 text-white btn-block mt-3 mb-3"
+                        class="btn btn-success nav-link px-4 text-white btn-block mt-3 mb-3 form-2"
                         >Submit</
                       >
                     </form>
                     
+                    <button onclick="$('.form-1').hide(); $('.form-2').show();" id="btn-selanjutnya"
+                        class="btn btn-success nav-link px-4 text-white btn-block mt-3 mb-3 form-1"
+                        >Selanjutnya</button>
                 </div>
             </div>
         </div>
@@ -1771,17 +1933,19 @@
                     if (response.data == 'Tidak Tersedia'){
                         $('.booking-danger').show();
                         $('.alert-success').hide();
+                        $('#btn-selanjutnya').attr('disabled','disabled');
                         $('button[type="submit"]').attr('disabled','disabled');
                     } 
                     else if (response.data == 'Pilih'){
                         $('.pilih-warning').show();
+                        $('#btn-selanjutnya').attr('disabled','disabled');
                         $('button[type="submit"]').attr('disabled','disabled');
                     }
                     else {
                         $('.booking-danger').hide();
                         $('.alert-success').show();
                         $('button[type="submit"]').removeAttr('disabled');
-                        console.log(response.data);
+                        $('#btn-selanjutnya').removeAttr('disabled');
                     }
                     })
                     .catch(function (error) {
@@ -1796,6 +1960,7 @@
     </script>
     <script>
         $(document).ready(function() {
+            $('.form-2').hide();
             $('#komoditas_lainnya').hide();
             $('#jumlah_peralatan').hide();
             $('#pupuk_lainnya').hide();
@@ -1803,6 +1968,21 @@
             $('#sarana_lainnya').hide();
             $('#keterangan_tambahan').hide();
             
+            // $('#btn-selanjutnya').onclick = function() {
+            //     $('.form-1').hide();
+            //     $('.form-2').show();
+            // }​;​
+            
+
+            // document.getElementById('button').onclick = function() {
+            //     alert("button was clicked");
+            // }​;​
+
+            // if ($('.btn-kembali').click() == true){
+            //     $('.form-1').show();
+            //     $('.form-2').hide();
+            //     console.log('testsetse');
+            // }
 
             $(function () {
                 $('[data-toggle="popover"]').popover({

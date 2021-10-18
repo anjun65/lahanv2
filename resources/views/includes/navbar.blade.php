@@ -4,9 +4,16 @@
       data-aos="fade-down"
     >
       <div class="container">
+        
+
         <a class="navbar-brand" href="/">
+          <img style="width: 15%" src="/images/logo.svg" alt="" />
           <img style="width: 15%" src="/images/logo.png" alt="" />
         </a>
+        {{-- <a class="navbar-brand" href="/">
+          <img style="width: 15%" src="/images/logo.png" alt="" />
+        </a> --}}
+        
         <button
           class="navbar-toggler"
           type="button"

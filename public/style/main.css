@@ -2282,6 +2282,10 @@ pre code {
     .page-auth {
         background-size: 100% !important;
     }
+
+    .form-login-new {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 767.98px) {
