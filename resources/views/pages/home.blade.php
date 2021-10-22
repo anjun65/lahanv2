@@ -1530,7 +1530,7 @@
                                         <label class="form-check-label" for="check_benih">
                                             Benih
                                         </label>
-                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_benih" class="form-control">
+                                        <input disabled placeholder="Jumlah" type="text" name="jumlah_benih" class="form-control">
                                 </div>
 
                                 <div class="form-check mb-3 mr-4">
@@ -1538,7 +1538,7 @@
                                         <label class="form-check-label" for="check_petroganik">
                                             Petroganik
                                         </label>
-                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_petroganik" class="form-control">
+                                        <input disabled placeholder="Jumlah" type="text" name="jumlah_petroganik" class="form-control">
                                 </div>
 
                                 <div class="form-check mb-3 mr-4">
@@ -1546,7 +1546,7 @@
                                         <label class="form-check-label" for="check_phonska">
                                             Phonska
                                         </label>
-                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_phonska" class="form-control">
+                                        <input disabled placeholder="Jumlah" type="text" name="jumlah_phonska" class="form-control">
                                 </div>
 
                                 <div class="form-check mb-3 mr-4">
@@ -1554,7 +1554,7 @@
                                         <label class="form-check-label" for="check_urea">
                                             Urea
                                         </label>
-                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_urea" class="form-control">
+                                        <input disabled placeholder="Jumlah" type="text" name="jumlah_urea" class="form-control">
                                 </div>
 
                                 <div class="form-check mb-3 mr-4">
@@ -1562,7 +1562,7 @@
                                         <label class="form-check-label" for="check_za">
                                             ZA
                                         </label>
-                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_za" class="form-control">
+                                        <input disabled placeholder="Jumlah" type="text" name="jumlah_za" class="form-control">
                                 </div>
 
                                 <div class="form-check mb-3 mr-4">
@@ -1570,7 +1570,7 @@
                                         <label class="form-check-label" for="check_zk">
                                             ZK
                                         </label>
-                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_zk" class="form-control">
+                                        <input disabled placeholder="Jumlah" type="text" name="jumlah_zk" class="form-control">
                                 </div>
 
                                 <div class="form-check mb-3 mr-4">
@@ -1578,7 +1578,7 @@
                                         <label class="form-check-label" for="check_kci">
                                             KCI
                                         </label>
-                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_kci" class="form-control">
+                                        <input disabled placeholder="Jumlah" type="text" name="jumlah_kci" class="form-control">
                                 </div>
 
                                 <div class="form-check mb-3 mr-4">

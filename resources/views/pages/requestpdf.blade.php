@@ -38,7 +38,7 @@
                         </td>
                         <td colspan="8" class="text-center">
                             <p><h3>PERMINTAAN SARANA PENELITIAN</h3></p>
-                            <p class="m-0">Nomor : {{ $item->nomor }}</p>
+                            <p class="m-0">Nomor : {{ $item->nomor }}/LI.00.01/79/FM/2021</p>
                             <p class="m-0">Tanggal : {{ $item->tanggal }}</p>
                         </td>
                     </tr>
@@ -340,12 +340,13 @@
                     <tr height="130px">
                         <td colspan="3">
                             <p class="text-center">
-                                 Peneliti
+                                 Peneliti <br/><br/><br/><br/><br/><br/>
+                                 {{ $item->user->name }}
                             </p>
                         </td>
                         <td colspan="4">
                             <p class="mb-0">
-                                 <u>Catatan :</u>
+                                 <u>Catatan Pengelola Kebun:</u>
                             </p>
                             <p>
                                  {{ $item->catatan_staf_muda }}
@@ -353,7 +354,8 @@
                         </td>
                         <td colspan="3">
                             <p class="text-center">
-                                 Staf Muda I/II
+                                 Pengelola Kebun<br/><br/><br/><br/><br/><br/>
+                                 Ganep Setiawan
                             </p>
                         </td>
                     </tr>
@@ -361,7 +363,7 @@
                     <tr height="130px">
                         <td colspan="5">
                             <p class="mb-0">
-                                 <u>Pendapat Staf Muda / VP * :</u>
+                                 <u>Komentar VP Riset :</u>
                             </p>
                             <p>
                                 {{ $item->catatan_vp }}
@@ -369,7 +371,9 @@
                         </td>
                         <td colspan="5">
                             <p class="text-center">
-                                 Mengetahui Staf Muda / VP *
+                                 Mengetahui VP Riset *
+                                 <br/><br/><br/><br/><br/><br/>
+                                 Muammar Ma'arif
                             </p>
                         </td>
                     </tr>
