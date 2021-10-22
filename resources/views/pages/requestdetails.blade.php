@@ -22,12 +22,14 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row no-print">
-                            <div class="col text-right">
-                                {{-- <button onclick="test_print()" class="btn btn-primary px-5">
-                                    Print As document
-                                </button> --}}
+                            <div class="col-md-4 text-left">
+                                {{ $item->nomor }}/LI.00.01/79/FM/2021
+                            </div>
+                            <div class="col-md-4 text-center">
+                                {{ $item->tanggal }}
+                            </div>
 
-                                
+                            <div class="col-md-4 text-right">
                                 <a href="{{ route('request-pdf', $item->id) }}" class="btn btn-primary px-5">
                                     Print As document
                                 </a>
@@ -41,7 +43,17 @@
                                             <input disabled type="text" name="judul" class="form-control" required value="{{ $item->judul }}">
                                         </div>
                                     </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group form-2">
+                                            <label>Rancangan Penelitian:</label>
+                                            <textarea disabled row="5" required type="text" name="rancangan" class="form-control">{{ $item->rancangan }}</textarea>
+                                        </div>
 
+                                        <div class="form-group form-2">
+                                            <label>Tujuan Kegiatan:</label>
+                                            <textarea disabled row="5" required type="text" name="tujuan" class="form-control">{{ $item->tujuan }}</textarea>
+                                        </div>
+                                    </div>
                                      <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Tanggal Tanam</label>
@@ -85,54 +97,186 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Keterangan</label>
-                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->keterangan_areal }}">
+                                            <label>Keterangan Areal</label>
+                                            <input disabled type="text" name="areal" class="form-control" required value="{{ $item->keterangan_areal }}">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Komoditas</label>
-                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->komoditas }}">
+                                            <input disabled type="text" name="areal" class="form-control" required value="{{ $item->komoditas }}">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Varietas</label>
-                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->varietas }}">
+                                            <input disabled type="text" name="areal" class="form-control" required value="{{ $item->varietas }}">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Peralatan</label>
-                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->peralatan }}">
+                                            <input disabled type="text" name="areal" class="form-control" required value="{{ $item->peralatan }}">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Jumlah Peralatan</label>
-                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->jumlah_peralatan }}">
+                                            <input disabled type="text" name="areal" class="form-control" required value="{{ $item->jumlah_peralatan }}">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Pupuk</label>
-                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->jumlah_pupuk }}">
+                                            <label>Qrcode</label>
+                                            <p>
+                                                @if($item->status == "Disetujui") 
+                                                    {{ $qrcode }}
+                                                @else
+                                                    QRcode akan muncul jika sudah disetujui
+                                                @endif
+                                            </p>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Sarana Lain</label>
-                                            <input disabled type="email" name="areal" class="form-control" required value="{{ $item->sarana_lain }}">
+                                    <div class="col-md-12">
+                                        <div class="form-group form-2">
+                                            <label>Benih dan Pupuk :</label>
+
+                                            <div class="input-group mb-3">
+                                                <div class="form-check mb-3 mr-4">
+                                                        <input class="form-check-input" type="checkbox" @isset($item->jumlah_benih) checked="true" @endisset id="check_benih">
+                                                        <label class="form-check-label" for="check_benih">
+                                                            Benih
+                                                        </label>
+                                                        <input disabled placeholder="Jumlah" type="number" value="{{ $item->jumlah_benih }}" name="jumlah_benih" class="form-control">
+                                                </div>
+
+                                                <div class="form-check mb-3 mr-4">
+                                                        <input class="form-check-input" type="checkbox" @isset($item->jumlah_petroganik) checked="true" @endisset id="check_petroganik">
+                                                        <label class="form-check-label" for="check_petroganik">
+                                                            Petroganik
+                                                        </label>
+                                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_petroganik" value="{{ $item->jumlah_petroganik }}" class="form-control">
+                                                </div>
+
+                                                <div class="form-check mb-3 mr-4">
+                                                        <input class="form-check-input" type="checkbox" @isset($item->jumlah_phonska) checked="true" @endisset id="check_phonska">
+                                                        <label class="form-check-label" for="check_phonska">
+                                                            Phonska
+                                                        </label>
+                                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_phonska" value="{{ $item->jumlah_phonska }}" class="form-control">
+                                                </div>
+
+                                                <div class="form-check mb-3 mr-4">
+                                                        <input class="form-check-input" type="checkbox" @isset($item->jumlah_urea) checked="true" @endisset id="check_urea">
+                                                        <label class="form-check-label" for="check_urea">
+                                                            Urea
+                                                        </label>
+                                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_urea" value="{{ $item->jumlah_urea }}" class="form-control">
+                                                </div>
+
+                                                <div class="form-check mb-3 mr-4">
+                                                        <input class="form-check-input" type="checkbox" @isset($item->jumlah_za) checked="true" @endisset id="check_za">
+                                                        <label class="form-check-label" for="check_za">
+                                                            ZA
+                                                        </label>
+                                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_za" value="{{ $item->jumlah_za }}" class="form-control">
+                                                </div>
+
+                                                <div class="form-check mb-3 mr-4">
+                                                        <input class="form-check-input" type="checkbox"  @isset($item->jumlah_zk) checked="true" @endisset id="check_zk">
+                                                        <label class="form-check-label" for="check_zk">
+                                                            ZK
+                                                        </label>
+                                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_zk" value="{{ $item->jumlah_zk }}" class="form-control">
+                                                </div>
+
+                                                <div class="form-check mb-3 mr-4">
+                                                        <input class="form-check-input" type="checkbox" @isset($item->jumlah_kci) checked="true" @endisset id="check_kci">
+                                                        <label class="form-check-label" for="check_kci">
+                                                            KCI
+                                                        </label>
+                                                        <input disabled placeholder="Jumlah" type="number" name="jumlah_kci" value="{{ $item->jumlah_kci }}" class="form-control">
+                                                </div>
+
+                                                <div class="form-check mb-3 mr-4">
+                                                        <input class="form-check-input" type="checkbox" @isset($item->benih_lain) checked="true" @endisset id="check_lain">
+                                                        <label class="form-check-label" for="check_lain">
+                                                            Lainnya
+                                                        </label>
+                                                        <input disabled type="text" placeholder="Keterangan" name="benih_lain" value="{{ $item->benih_lain }}" class="form-control mb-3">
+                                                        <input disabled type="number" placeholder="Jumlah" name="jumlah_lain" value="{{ $item->jumlah_lain }}" class="form-control mb-3">
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
 
+                                    <div class="col-md-12">
+                                        <div class="form-group form-2">
+                                            <label>Sarana Lain :</label>
 
+                                            <div class="input-group mb-3">
+                                                <div class="form-check mb-3 mr-4">
+                                                    <input class="form-check-input" type="checkbox" @isset($item->pestisida) checked="true" @endisset name="pestisida" id="check_pestisida">
+                                                        <label class="form-check-label" for="check_pestisida">
+                                                            Pestisida sesuai kebutuhan
+                                                        </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="form-check mb-3 mr-4">
+                                                    <input class="form-check-input" type="checkbox" @isset($item->herbisida) checked="true" @endisset name="herbisida" id="check_herbisida">
+                                                        <label class="form-check-label" for="check_herbisida">
+                                                            Herbisida sesuai kebutuhan
+                                                        </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="form-check mb-3 mr-4">
+                                                    <input class="form-check-input" type="checkbox" @isset($item->fungisida) checked="true" @endisset name="fungisida" id="check_fungisida">
+                                                        <label class="form-check-label" for="check_fungisida">
+                                                            Fungisida sesuai kebutuhan
+                                                        </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="form-check mb-3 mr-4">
+                                                    <input class="form-check-input" type="checkbox" @isset($item->plastik_barrier) checked="true" @endisset name="plastik_barrier" id="check_plastik">
+                                                        <label class="form-check-label" for="check_plastik">
+                                                            Plastik Barier
+                                                        </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="form-check mb-3 mr-4">
+                                                    <input class="form-check-input" type="checkbox" @isset($item->jaring_burung) checked="true" @endisset name="jaring_burung" id="check_jaring">
+                                                        <label class="form-check-label" for="check_jaring">
+                                                            Jaring Burung
+                                                        </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-check mb-3 mr-4">
+                                                        <input class="form-check-input" type="checkbox" @isset($item->sarana_lain) checked="true" @endisset id="check_sarana_lain">
+                                                        <label class="form-check-label" for="check_sarana_lain">
+                                                            Lainnya
+                                                        </label>
+                                            </div>
+                                            <div class="form-check mb-3 mr-4">
+                                                <input type="text" placeholder="Keterangan" value="{{ $item->sarana_lain }}" name="sarana_lain" class="form-control mb-3">
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                     {{-- <div class="col-md-12">
@@ -312,18 +456,7 @@
 
                                     </div> --}}
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Qrcode</label>
-                                            <p>
-                                                @if($item->status == "Disetujui") 
-                                                    {{ $qrcode }}
-                                                @else
-                                                    QRcode akan muncul jika sudah disetujui
-                                                @endif
-                                            </p>
-                                        </div>
-                                    </div>
+                                    
 
                                     <div class="col-md-12">
                                         <div class="form-group">

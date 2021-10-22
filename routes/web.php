@@ -26,6 +26,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/request/{id}', [App\Http\Controllers\RequestController::class, 'show'])->name('request-show');
 
     Route::get('/request/pdf/{id}', [App\Http\Controllers\RequestController::class, 'generatePDF'])->name('request-pdf');
+
+    Route::get('/barcode/{id}', [App\Http\Controllers\BarcodeController::class, 'show'])->name('barcode-show');
 });
 
 Route::prefix('admin')

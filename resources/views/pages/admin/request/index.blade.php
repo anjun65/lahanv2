@@ -59,9 +59,9 @@
             columns: [
                 {data: 'id', name:'id'},
                 {data: 'judul', name:'judul'},
-                {data: 'awal_pelaksanaan', name:'awal_pelaksanaanemail'},
+                {data: 'awal_pelaksanaan', name:'awal_pelaksanaan'},
                 {data: 'akhir_pelaksanaan', name:'akhir_pelaksanaan'},
-                {data: 'user.name', name:'user.name'},
+                {data: 'peneliti', name:'peneliti'},
                 {data: 'blok', name:'blok'},
                 {
                     data: 'action',

@@ -24,12 +24,29 @@ class Request extends Model
         'varietas',
         'peralatan',
         'jumlah_peralatan',
-        'pupuk',
-        'jumlah_pupuk',
-        'pupuk',
-        'jumlah_pupuk',
+        
+        'jumlah_benih',
+        'jumlah_petroganik',
+        'jumlah_phonska',
+        'jumlah_urea',
+        'jumlah_za',
+        'jumlah_zk',
+        'jumlah_kci',
+        'benih_lain',
+        'jumlah_lain',
+
+        'pestisida',
+        'herbisida',
+        'fungisida',
+        'plastik_barrier',
+        'jaring_burung',
+
         'sarana_lain',
         'blok_details',
+
+        'rancangan',
+        'tujuan',
+        
 
         'catatan_staf_muda',
         'catatan_vp',

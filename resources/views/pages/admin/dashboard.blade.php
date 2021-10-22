@@ -38,7 +38,7 @@
                     Permintaan yang Perlu disetujui
                 </div>
                 <div class="dashboard-card-subtitle">
-                    {{-- Rp. {{ $revenue }} --}}
+                    {{ $setuju }}
                 </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                     Jumlah Permintaan 
                 </div>
                 <div class="dashboard-card-subtitle">
-                    {{-- {{ $transactions }} --}}
+                    {{ $transactions }}
                 </div>
                 </div>
             </div>

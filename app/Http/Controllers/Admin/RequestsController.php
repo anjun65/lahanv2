@@ -21,7 +21,7 @@ class RequestsController extends Controller
     {
         if(request()->ajax())
         {
-            $query = Request::with(['user'])->query();
+            $query = Request::query();
             return Datatables::of($query)
                 ->addcolumn('action', function($item) {
                     return '
@@ -104,7 +104,7 @@ class RequestsController extends Controller
         
         $item = Request::findOrFail($id);
 
-        $qrcode = QrCode::generate(route('request', $id));
+        $qrcode = QrCode::generate(route('barcode-show', $id));
 
         return view('pages.admin.request.edit', [
             'item' => $item,
@@ -127,6 +127,50 @@ class RequestsController extends Controller
         $item = Request::findOrFail($id);
 
         $item->update([
+            'judul' =>  $request->judul,
+            'nomor' => $request->nomor,
+            'awal_pelaksanaan' => $request->awal_pelaksanaan,
+            'akhir_pelaksanaan' => $request->akhir_pelaksanaan,
+            'tanggal_tanam' => $request->tanam_date,
+            'areal' => $request->areal,
+            'keterangan_areal' => $request->keterangan_areal,
+            'blok' =>  $request->blok,
+            'blok_details' =>  $request->blok_details,
+            // 'peneliti' =>  $request->peneliti,
+            'judul' =>  $request->judul,
+
+            'jumlah_ember' =>  $request->jumlah_ember,
+            'jumlah_polibag' =>  $request->jumlah_polibag,
+            'jumlah_pot' =>  $request->jumlah_pot,
+            'jumlah_mulsa' =>  $request->jumlah_mulsa,
+            'jumlah_benih' =>  $request->jumlah_benih,
+            'jumlah_petroganik' =>  $request->jumlah_petroganik,
+            'jumlah_phonska' =>  $request->jumlah_phonska,
+            'jumlah_urea' =>  $request->jumlah_urea,
+            'jumlah_za' =>  $request->jumlah_za,
+            'jumlah_zk' =>  $request->jumlah_zk,
+            'jumlah_kci' =>  $request->jumlah_kci,
+            'benih_lain' =>  $request->benih_lain,
+            'jumlah_lain' =>  $request->jumlah_lain,
+            
+            'pestisida' =>  $request->has('pestisida'),
+            'herbisida' =>  $request->has('herbisida'),
+            'fungisida' =>  $request->has('fungisida'),
+            'plastik_barrier' =>  $request->has('plastik_barrier'),
+            'jaring_burung' =>  $request->has('jaring_burung'),
+
+            'rancangan' => $request->rancangan,
+            'tujuan' => $request->tujuan,
+
+            'sarana_lain' =>  $request->sarana_lain,
+
+            'komoditas' =>  $request->komoditas,
+            'varietas' =>  $request->varietas,
+            'peralatan' =>  $request->peralatan,
+            'jumlah_peralatan' =>  $request->jumlah_peralatan,
+            'pupuk' =>  $request->pupuk,
+            'jumlah_pupuk' =>  $request->jumlah_pupuk,
+            
             'catatan_staf_muda' => $catatan,
             'status' => $status,
         ]);

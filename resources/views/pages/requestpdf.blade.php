@@ -16,20 +16,8 @@
 <div class="page-content page-home">
     <div class="container">
         <div class="row">
-            <table class="ml-2">
+            <table class="">
                 <tbody>
-                    <tr>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td colspan="2" class="text-right" style="border: 0.5px solid;">PRO.78.03  </td>
-                    </tr>
-                
                     <tr>
                         <td width="10%" style="border: none;border-left:none; !important"></td>
                         <td width="10%" style="border: none"></td>
@@ -40,34 +28,65 @@
                         <td width="10%" style="border: none"></td>
                         <td width="10%" style="border: none"></td>
                         <td width="10%" style="border: none"></td>
-                        <td width="9%" style="border: none"><br/></td>
-                        <td width="1%" style="border: none"><br/></td>
+                        <td width="10%" style="border: none"><br/></td>
                     </tr>
                 </tbody>
                 <tbody class="table table-bordered">
                     <tr>
-                        <td colspan="3" class="text-center align-middle">
-                            <img src="{{ asset('images/logo.png') }}" class="card-img-top w-50">
+                        <td colspan="2" class="text-center align-middle">
+                            <img src="{{ asset('images/logo-pdf.png') }}" class="card-img-top w-100">
                         </td>
-                        <td colspan="7" class="text-center">
+                        <td colspan="8" class="text-center">
                             <p><h3>PERMINTAAN SARANA PENELITIAN</h3></p>
                             <p class="m-0">Nomor : {{ $item->nomor }}</p>
                             <p class="m-0">Tanggal : {{ $item->tanggal }}</p>
                         </td>
-                        <td width="1%" style="border: none"><br/></td>
+                    </tr>
+                    <tr>
+                        {{-- <td colspan="2">
+                            
+                        </td>
+                        <td colspan="1">
+                            :
+                        </td> --}}
+                        <td colspan="10">
+                            <p>Judul Kegiatan&emsp;&emsp;&emsp;&emsp;: {{ $item->judul }}<br>
+                               Waktu Pelaksanaan &emsp;: {{ $item->awal_pelaksanaan }}-{{ $item->akhir_pelaksanaan }}<br>
+                               Blok&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: {{ $item->blok_details }}<br>
+                               Varietas&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: {{ $item->varietas }}<br>
+                               Peneliti&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: {{ $item->user->name }}
+                            </p>
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="10">
-                            <p>Sesuai proposal</p> 
-                            <p style="padding-left:20px;">Judul Kegiatan    : {{ $item->judul }}</p>
-                            <p style="padding-left:20px;">Waktu Pelaksanaan : {{ $item->awal_pelaksanaan }} sampai {{ $item->akhir_pelaksanaan }}</p>	
-                            <p style="padding-left:20px;">Blok              : {{ $item->blok_details }}</p>	
-                            <p style="padding-left:20px;">Peneliti          : {{ $item->judul }}</p>
-                            Mohon untuk dapat disediakan sarana / prasarana penelitian pada komoditas {{ $item->komoditas }} berupa :
+                            <b>A. TUJUAN</b>
                         </td>
-                        <td width="1%" style="border: none"><br/></td>
                     </tr>
 
+                    <tr>
+                        <td colspan="10">
+                            {{ $item->tujuan }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="10">
+                            <b>B. PERLAKUAN</b>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="10">
+                            {{ $item->rancangan }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="10">
+                            <b>C. KEBUTUHAN SARANA</b>
+                        </td>
+                    </tr>
                     <tr>
                         <td colspan="5">
                             <p class="m-1" style="padding-left:5px;">A. Areal</p>
@@ -112,16 +131,6 @@
                                     <input type="checkbox" aria-label="Checkbox for following text input"> Lahan paving , ..... luas m<sup>2</sup>
                                 </p>
                             @endif
-
-                            @if ($item->areal == "Laboratorium")
-                                <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Laboratorium , {{ $item->keterangan_areal }}
-                                </p>
-                            @else
-                                <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> Laboratorium .....
-                                </p>
-                            @endif
                         </td>
                         
                         <td colspan="5">
@@ -164,16 +173,6 @@
                             @else
                                 <p class="m-2" style="padding-left:20px;">
                                     <input type="checkbox" aria-label="Checkbox for following text input"> Mulsa
-                                </p>
-                            @endif
-
-                            @if ($item->peralatan == "Lainnya")
-                                <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Paket peralatan budidaya (cangkul, dll)
-                                </p>
-                            @else
-                                <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> Paket peralatan budidaya (cangkul, dll)
                                 </p>
                             @endif
                         </td>

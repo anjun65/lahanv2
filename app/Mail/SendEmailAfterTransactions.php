@@ -29,9 +29,9 @@ class SendEmailAfterTransactions extends Mailable
     public function build()
     {
         return $this
-            ->from('hajrulkhaira@gmail.com')
-            ->to('hajrulkhairas@googlemail.com')
-            ->subject('Test')
-            ->view('email.booking_area');
+            ->from('hajrul.khairas@googlemail.com')
+            ->to('hajrulkhaira@gmail.com')
+            ->subject('Booking Baru')
+            ->markdown('email.booking_area');
     }
 }

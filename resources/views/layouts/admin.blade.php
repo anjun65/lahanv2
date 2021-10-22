@@ -23,7 +23,7 @@
         <!-- Sidebar -->
         <div class="border-right wrapper-test" id="sidebar-wrapper">
           <div class="sidebar-heading text-center">
-            <img style="width: 100%" src="/images/logo.png" alt="" class="my-4" />
+            <img style="width: 100%" src="/images/logo.svg" alt="" class="my-4" />
           </div>
           <div class="list-group list-group-flush">
             <a
@@ -34,7 +34,7 @@
 
             <a
               href="{{ route('request.index') }}"
-              class="list-group-item list-group-item-action {{ (request()->is('admin/sarana*')) ? 'active' : '' }}"
+              class="list-group-item list-group-item-action {{ (request()->is('admin/request*')) ? 'active' : '' }}"
               >Permintaan</a
             >
 

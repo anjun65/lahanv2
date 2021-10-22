@@ -866,9 +866,9 @@
 
                                 
                                 @if(!empty($new_RK401))
-                                    <rect data-toggle="popover" booked="yes" data-container="body" title="Status Lahan" data-content="{{ $new_RK401 }}" data-placement="right" data-bs-trigger="hover focus"  areal="Rumah Kaca" name="RK401" blok="RK3" pilih="no" panjang="1" lebar="1" class="cls-9 lahanrect" x="140.39" y="265.51" width="131.88" height="99.56"/>
+                                    <rect data-toggle="popover" booked="yes" data-container="body" title="Status Lahan" data-content="{{ $new_RK401 }}" data-placement="right" data-bs-trigger="hover focus"  areal="Lahan Kering" name="SH01" blok="RK3" pilih="no" panjang="1" lebar="1" class="cls-9 lahanrect" x="140.39" y="265.51" width="131.88" height="99.56"/>
                                 @else
-                                    <rect areal="Rumah Kaca" name="RK401" blok="RK3" pilih="no" panjang="1" lebar="1" class="cls-9 lahanrect" x="140.39" y="265.51" width="131.88" height="99.56"/>
+                                    <rect areal="Lahan Kering" name="RK401" blok="SH01" pilih="no" panjang="1" lebar="1" class="cls-9 lahanrect" x="140.39" y="265.51" width="131.88" height="99.56"/>
                                 @endif
 
 
@@ -1449,6 +1449,16 @@
                             </div>
                         </div>
 
+                        <div class="form-group form-2">
+                            <label>Rancangan Penelitian:</label>
+                            <textarea row="5" required type="text" name="rancangan" class="form-control"></textarea>
+                        </div>
+
+                        <div class="form-group form-2">
+                            <label>Tujuan Kegiatan:</label>
+                            <textarea row="5" required type="text" name="tujuan" class="form-control"></textarea>
+                        </div>
+
                         {{-- <div class="form-group">
                             <label>Awal Pelaksanaan :</label>
                             <input type="text" name="awal_pelaksanaan" class="form-control">
@@ -1464,6 +1474,7 @@
                                 <div class="form-group">
                                     <label>Komoditas:</label>
                                     <select name="komoditas" id="select_komoditas" class="form-control">
+                                        <option selected> Tidak Memilih </option>
                                         <option value="Padi">Padi</option>
                                         <option value="Cabai Rawit">Cabai Rawit</option>
                                         <option value="Cabai Besar">Cabai Besar</option>
@@ -1493,6 +1504,7 @@
                                 <div class="form-group">
                                     <label>Peralatan:</label>
                                     <select name="peralatan" id="select_peralatan" class="form-control">
+                                        <option selected> Tidak Memilih </option>
                                         <option value="Ember">Ember</option>
                                         <option value="Polibag">Polibag</option>
                                         <option value="Pot/drum">Pot/drum</option>
@@ -1504,7 +1516,7 @@
                             <div class="col-md-12 form-2">
                                 <div class="form-group" id="jumlah_peralatan">
                                     <label>Jumlah Peratalan:</label>
-                                    <input type="text" placeholder="Masukkan Jumlah Peralatan" name="jumlah_peralatan" class="form-control">
+                                    <input type="number" placeholder="Masukkan Jumlah Peralatan" name="jumlah_peralatan" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -1586,7 +1598,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="form-check mb-3 mr-4">
-                                    <input class="form-check-input" type="checkbox" value="false" name="pestisida" id="check_pestisida">
+                                    <input class="form-check-input" type="checkbox" name="pestisida" id="check_pestisida">
                                         <label class="form-check-label" for="check_pestisida">
                                             Pestisida sesuai kebutuhan
                                         </label>
@@ -1595,7 +1607,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="form-check mb-3 mr-4">
-                                    <input class="form-check-input" type="checkbox" value="" name="herbisida" id="check_herbisida">
+                                    <input class="form-check-input" type="checkbox" name="herbisida" id="check_herbisida">
                                         <label class="form-check-label" for="check_herbisida">
                                             Herbisida sesuai kebutuhan
                                         </label>
@@ -1604,7 +1616,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="form-check mb-3 mr-4">
-                                    <input class="form-check-input" type="checkbox" value="" name="fungisida" id="check_fungisida">
+                                    <input class="form-check-input" type="checkbox" name="fungisida" id="check_fungisida">
                                         <label class="form-check-label" for="check_fungisida">
                                             Fungisida sesuai kebutuhan
                                         </label>
@@ -1613,7 +1625,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="form-check mb-3 mr-4">
-                                    <input class="form-check-input" type="checkbox" value="" name="plastik_barrier" id="check_plastik">
+                                    <input class="form-check-input" type="checkbox" name="plastik_barrier" id="check_plastik">
                                         <label class="form-check-label" for="check_plastik">
                                             Plastik Barier
                                         </label>
@@ -1622,7 +1634,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="form-check mb-3 mr-4">
-                                    <input class="form-check-input" type="checkbox" value="" name="jaring_burung" id="check_jaring">
+                                    <input class="form-check-input" type="checkbox" name="jaring_burung" id="check_jaring">
                                         <label class="form-check-label" for="check_jaring">
                                             Jaring Burung
                                         </label>
@@ -1630,7 +1642,7 @@
                             </div>
 
                             <div class="form-check mb-3 mr-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="check_sarana_lain">
+                                        <input class="form-check-input" type="checkbox" id="check_sarana_lain">
                                         <label class="form-check-label" for="check_sarana_lain">
                                             Lainnya
                                         </label>
@@ -1863,7 +1875,7 @@
                     
                     <button onclick="$('.form-1').hide(); $('.form-2').show();" id="btn-selanjutnya"
                         class="btn btn-success nav-link px-4 text-white btn-block mt-3 mb-3 form-1"
-                        >Selanjutnya</button>
+                        disabled>Selanjutnya</button>
                 </div>
             </div>
         </div>
@@ -2165,119 +2177,119 @@
                 }
             });
 
-            // $("input[id=check_ember]").click(function() {
-            //    if ($("input[id=check_ember]").is(':checked') ){
-            //         $("input[name=jumlah_ember]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_ember]").attr('disabled','disabled');
-            //         $("input[name=jumlah_ember]").val('');
-            //     }
-            // });
+            $("input[id=check_ember]").click(function() {
+               if ($("input[id=check_ember]").is(':checked') ){
+                    $("input[name=jumlah_ember]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_ember]").attr('disabled','disabled');
+                    $("input[name=jumlah_ember]").val('');
+                }
+            });
 
 
-            // $("input[id=check_polibag]").click(function() {
-            //    if ($("input[id=check_polibag]").is(':checked') ){
-            //         $("input[name=jumlah_polibag]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_polibag]").attr('disabled','disabled');
-            //         $("input[name=jumlah_polibag]").val('');
-            //     }
-            // });
+            $("input[id=check_polibag]").click(function() {
+               if ($("input[id=check_polibag]").is(':checked') ){
+                    $("input[name=jumlah_polibag]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_polibag]").attr('disabled','disabled');
+                    $("input[name=jumlah_polibag]").val('');
+                }
+            });
             
-            // $("input[id=check_pot]").click(function() {
-            //    if ($("input[id=check_pot]").is(':checked') ){
-            //         $("input[name=jumlah_pot]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_pot]").attr('disabled','disabled');
-            //         $("input[name=jumlah_pot]").val('');
-            //     }
-            // });
+            $("input[id=check_pot]").click(function() {
+               if ($("input[id=check_pot]").is(':checked') ){
+                    $("input[name=jumlah_pot]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_pot]").attr('disabled','disabled');
+                    $("input[name=jumlah_pot]").val('');
+                }
+            });
 
-            // $("input[id=check_mulsa]").click(function() {
-            //    if ($("input[id=check_mulsa]").is(':checked') ){
-            //         $("input[name=jumlah_mulsa]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_mulsa]").attr('disabled','disabled');
-            //         $("input[name=jumlah_mulsa]").val('');
-            //     }
-            // });
+            $("input[id=check_mulsa]").click(function() {
+               if ($("input[id=check_mulsa]").is(':checked') ){
+                    $("input[name=jumlah_mulsa]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_mulsa]").attr('disabled','disabled');
+                    $("input[name=jumlah_mulsa]").val('');
+                }
+            });
 
 
-            // $("input[id=check_benih]").click(function() {
-            //    if ($("input[id=check_benih]").is(':checked') ){
-            //         $("input[name=jumlah_benih]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_benih]").attr('disabled','disabled');
-            //         $("input[name=jumlah_benih]").val('');
-            //     }
-            // });
+            $("input[id=check_benih]").click(function() {
+               if ($("input[id=check_benih]").is(':checked') ){
+                    $("input[name=jumlah_benih]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_benih]").attr('disabled','disabled');
+                    $("input[name=jumlah_benih]").val('');
+                }
+            });
 
-            // $("input[id=check_petroganik]").click(function() {
-            //    if ($("input[id=check_petroganik]").is(':checked') ){
-            //         $("input[name=jumlah_petroganik]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_petroganik]").attr('disabled','disabled');
-            //         $("input[name=jumlah_petroganik]").val('');
-            //     }
-            // });
+            $("input[id=check_petroganik]").click(function() {
+               if ($("input[id=check_petroganik]").is(':checked') ){
+                    $("input[name=jumlah_petroganik]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_petroganik]").attr('disabled','disabled');
+                    $("input[name=jumlah_petroganik]").val('');
+                }
+            });
 
-            // $("input[id=check_phonska]").click(function() {
-            //    if ($("input[id=check_phonska]").is(':checked') ){
-            //         $("input[name=jumlah_phonska]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_phonska]").attr('disabled','disabled');
-            //         $("input[name=jumlah_phonska]").val('');
-            //     }
-            // });
+            $("input[id=check_phonska]").click(function() {
+               if ($("input[id=check_phonska]").is(':checked') ){
+                    $("input[name=jumlah_phonska]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_phonska]").attr('disabled','disabled');
+                    $("input[name=jumlah_phonska]").val('');
+                }
+            });
 
-            // $("input[id=check_urea]").click(function() {
-            //    if ($("input[id=check_urea]").is(':checked') ){
-            //         $("input[name=jumlah_urea]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_urea]").attr('disabled','disabled');
-            //         $("input[name=jumlah_urea]").val('');
-            //     }
-            // });
+            $("input[id=check_urea]").click(function() {
+               if ($("input[id=check_urea]").is(':checked') ){
+                    $("input[name=jumlah_urea]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_urea]").attr('disabled','disabled');
+                    $("input[name=jumlah_urea]").val('');
+                }
+            });
 
-            // $("input[id=check_za]").click(function() {
-            //    if ($("input[id=check_za]").is(':checked') ){
-            //         $("input[name=jumlah_za]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_za]").attr('disabled','disabled');
-            //         $("input[name=jumlah_za]").val('');
-            //     }
-            // });
+            $("input[id=check_za]").click(function() {
+               if ($("input[id=check_za]").is(':checked') ){
+                    $("input[name=jumlah_za]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_za]").attr('disabled','disabled');
+                    $("input[name=jumlah_za]").val('');
+                }
+            });
 
-            // $("input[id=check_zk]").click(function() {
-            //    if ($("input[id=check_zk]").is(':checked') ){
-            //         $("input[name=jumlah_zk]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_zk]").attr('disabled','disabled');
-            //         $("input[name=jumlah_zk]").val('');
-            //     }
-            // });
+            $("input[id=check_zk]").click(function() {
+               if ($("input[id=check_zk]").is(':checked') ){
+                    $("input[name=jumlah_zk]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_zk]").attr('disabled','disabled');
+                    $("input[name=jumlah_zk]").val('');
+                }
+            });
 
-            // $("input[id=check_kci]").click(function() {
-            //    if ($("input[id=check_kci]").is(':checked') ){
-            //         $("input[name=jumlah_kci]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=jumlah_kci]").attr('disabled','disabled');
-            //         $("input[name=jumlah_kci]").val('');
-            //     }
-            // });
+            $("input[id=check_kci]").click(function() {
+               if ($("input[id=check_kci]").is(':checked') ){
+                    $("input[name=jumlah_kci]").removeAttr('disabled');
+                } else {
+                    $("input[name=jumlah_kci]").attr('disabled','disabled');
+                    $("input[name=jumlah_kci]").val('');
+                }
+            });
 
-            // $("input[id=check_lain]").click(function() {
-            //    if ($("input[id=check_lain]").is(':checked') ){
-            //         $("input[name=benih_lain]").removeAttr('disabled');
-            //         $("input[name=jumlah_lain]").removeAttr('disabled');
-            //     } else {
-            //         $("input[name=benih_lain]").attr('disabled','disabled');
-            //         $("input[name=benih_lain]").val('');
+            $("input[id=check_lain]").click(function() {
+               if ($("input[id=check_lain]").is(':checked') ){
+                    $("input[name=benih_lain]").removeAttr('disabled');
+                    $("input[name=jumlah_lain]").removeAttr('disabled');
+                } else {
+                    $("input[name=benih_lain]").attr('disabled','disabled');
+                    $("input[name=benih_lain]").val('');
 
-            //         $("input[name=jumlah_lain]").attr('disabled','disabled');
-            //         $("input[name=jumlah_lain]").val('');
-            //     }
-            // });
+                    $("input[name=jumlah_lain]").attr('disabled','disabled');
+                    $("input[name=jumlah_lain]").val('');
+                }
+            });
         });
 
         

@@ -116,7 +116,7 @@
 @endsection --}}
 
 @section('content')
-    <div class="container-xxl">
+    <div class="container-custom" style="width: 100vw">
         <div class="row align-items-center row-login">
         <div class="d-none d-sm-none d-md-block col-md-8 col-lg-7 text-center">
             <img
