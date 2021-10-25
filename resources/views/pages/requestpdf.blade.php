@@ -123,29 +123,29 @@
                             <p class="m-1" style="padding-left:5px;">A. Areal</p>
                             @if ($item->areal == "Lahan sawah/lahan basah")
                                 <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Lahan sawah , {{ $item->keterangan_areal }} luas m<sup>2</sup>
+                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Lahan sawah , luas {{ $item->keterangan_areal }} m<sup>2</sup>
                                 </p>
                             @else
                                 <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> Lahan sawah , ..... luas m<sup>2</sup>
+                                    <input type="checkbox" aria-label="Checkbox for following text input"> Lahan sawah , luas ...... m<sup>2</sup>
                                 </p>
                             @endif
 
 
                             @if ($item->areal == "Lahan Kering ")
                                 <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Lahan Kering , {{ $item->keterangan_areal }} luas m<sup>2</sup>
+                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Lahan Kering , luas {{ $item->keterangan_areal }} m<sup>2</sup>
                                 </p>
                             @else
                                 <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> Lahan Kering , ..... luas m<sup>2</sup>
+                                    <input type="checkbox" aria-label="Checkbox for following text input"> Lahan Kering , luas ...... m<sup>2</sup>
                                 </p>
                             @endif
 
 
                             @if ($item->areal == "Rumah Kaca")
                                 <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Rumah Kaca , {{ $item->keterangan_areal }} luas m<sup>2</sup>
+                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Rumah Kaca , jumlah {{ $item->keterangan_areal }} buah
                                 </p>
                             @else
                                 <p class="m-2" style="padding-left:20px;">
@@ -155,11 +155,11 @@
 
                             @if ($item->areal == "Lahan Paving")
                                 <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Lahan paving , {{ $item->keterangan_areal }} luas m<sup>2</sup>
+                                    <input type="checkbox" checked="true" aria-label="Checkbox for following text input"> Lahan paving , luas {{ $item->keterangan_areal }} m<sup>2</sup>
                                 </p>
                             @else
                                 <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> Lahan paving , ..... luas m<sup>2</sup>
+                                    <input type="checkbox" aria-label="Checkbox for following text input"> Lahan paving , luas ...... m<sup>2</sup>
                                 </p>
                             @endif
                         </td>
@@ -229,7 +229,7 @@
                                 </p>
                             @else
                                 <p class="m-2" style="padding-left:20px;">
-                                    <input type="checkbox" aria-label="Checkbox for following text input"> Petroganik
+                                    <input type="checkbox" aria-label="Checkbox for following text input"> Petroganik, ........ Kg
                                 </p>
                             @endif
 
