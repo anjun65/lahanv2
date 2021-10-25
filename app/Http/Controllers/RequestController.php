@@ -146,7 +146,7 @@ class RequestController extends Controller
 
         // $new_book->update(['details_id' => $new_book_detail->id]);
 
-        Mail::send(new \App\Mail\SendEmailAfterTransactions());
+        // Mail::send(new \App\Mail\SendEmailAfterTransactions());
 
         return redirect()->route('request');
     }

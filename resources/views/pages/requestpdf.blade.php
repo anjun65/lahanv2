@@ -16,22 +16,22 @@
 <div class="page-content page-home">
     <div class="container">
         <div class="row">
-            <table class="">
+            <table class="table table-bordered" style="">
                 <tbody>
                     <tr>
-                        <td width="10%" style="border: none;border-left:none; !important"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"></td>
-                        <td width="10%" style="border: none"><br/></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-right:hidden;"></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-right:hidden;"></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-right:hidden;"></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-right:hidden;"></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-right:hidden;"></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-right:hidden;"></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-right:hidden;"></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-right:hidden;"></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-right:hidden;"></td>
+                        <td width="10%" style="border-top: hidden;border-left:hidden;border-left:hidden;border-right-color: white;"></td>
                     </tr>
                 </tbody>
-                <tbody class="table table-bordered">
+                <tbody>
                     <tr>
                         <td colspan="2" class="text-center align-middle">
                             <img src="{{ asset('images/logo-pdf.png') }}" class="card-img-top w-100">
@@ -43,19 +43,50 @@
                         </td>
                     </tr>
                     <tr>
-                        {{-- <td colspan="2">
-                            
+                        <td colspan="2" height="10px" style="padding-bottom:0px;border-bottom: hidden;border-right:hidden;">
+                            Judul Kegiatan
                         </td>
-                        <td colspan="1">
-                            :
-                        </td> --}}
-                        <td colspan="10">
-                            <p>Judul Kegiatan&emsp;&emsp;&emsp;&emsp;: {{ $item->judul }}<br>
-                               Waktu Pelaksanaan &emsp;: {{ $item->awal_pelaksanaan }}-{{ $item->akhir_pelaksanaan }}<br>
+                        <td colspan="8" style="padding-bottom:0px;border-bottom: hidden;">
+                            : {{ $item->judul }}<br>
+                               {{-- Waktu Pelaksanaan &emsp;: {{ $item->awal_pelaksanaan }}-{{ $item->akhir_pelaksanaan }}<br>
                                Blok&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: {{ $item->blok_details }}<br>
                                Varietas&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: {{ $item->varietas }}<br>
                                Peneliti&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: {{ $item->user->name }}
-                            </p>
+                            </:> --}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" height="10px" style="font-size: 15px;padding-top:0px;padding-bottom:0px;border-bottom: hidden;border-right:hidden;">
+                            Waktu Pelaksanaan
+                        </td>
+                        <td colspan="8" style="padding-top:0px;padding-bottom:0px;border-bottom: hidden;">
+                            : {{ $item->awal_pelaksanaan }}-{{ $item->akhir_pelaksanaan }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="padding-top:0px;padding-bottom:0px;border-bottom: hidden;border-right:hidden;">
+                            Blok
+                        </td>
+                        <td colspan="8" style="padding-top:0px;padding-bottom:0px;border-bottom: hidden;">
+                            : {{ $item->blok }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding-top:0px;padding-bottom:0px;border-bottom: hidden;border-right:hidden;">
+                            Varietas
+                        </td>
+                        <td colspan="8" style="padding-top:0px;padding-bottom:0px;border-bottom: hidden;">
+                            : {{ $item->varietas }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding-top:0px;border-right:hidden;">
+                            Peneliti
+                        </td>
+                        <td colspan="8" style="padding-top:0px;padding-bottom:0px;">
+                            : {{ $item->user->name }}
                         </td>
                     </tr>
                     <tr>
