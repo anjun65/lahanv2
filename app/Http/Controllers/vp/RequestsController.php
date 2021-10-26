@@ -8,6 +8,8 @@ use App\Models\Request;
 use App\Http\Requests\Admin\RequestRequest;
 use Yajra\DataTables\Facades\DataTables;
 
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+
 
 class RequestsController extends Controller
 {
@@ -103,8 +105,11 @@ class RequestsController extends Controller
         
         $item = Request::findOrFail($id);
 
-        return view('pages.admin.request.edit', [
-            'item' => $item
+        $qrcode = QrCode::generate(route('barcode-show', $id));
+
+        return view('pages.vp.request.edit', [
+            'item' => $item,
+            'qrcode' => $qrcode,
         ]);
     }
 
@@ -115,16 +120,13 @@ class RequestsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(RequestRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $catatan = $request->description;
-        $status = $request->status;
         
         $item = Request::findOrFail($id);
 
         $item->update([
-            'catatan_staf_muda' => $catatan,
-            'status' => $status,
+            'catatan_staf_vp' => $request->catatan_staf_vp,
         ]);
 
         return redirect()->route('request.index');

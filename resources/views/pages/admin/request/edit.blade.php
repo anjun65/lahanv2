@@ -179,7 +179,7 @@
                                                         <label class="form-check-label" for="check_benih">
                                                             Benih
                                                         </label>
-                                                        <input placeholder="Jumlah" type="number" value="{{ $item->jumlah_benih }}" name="jumlah_benih" class="form-control">
+                                                        <input placeholder="Jumlah" type="text" value="{{ $item->jumlah_benih }}" name="jumlah_benih" class="form-control">
                                                 </div>
 
                                                 <div class="form-check mb-3 mr-4">
@@ -187,7 +187,7 @@
                                                         <label class="form-check-label" for="check_petroganik">
                                                             Petroganik
                                                         </label>
-                                                        <input placeholder="Jumlah" type="number" name="jumlah_petroganik" value="{{ $item->jumlah_petroganik }}" class="form-control">
+                                                        <input placeholder="Jumlah" type="text" name="jumlah_petroganik" value="{{ $item->jumlah_petroganik }}" class="form-control">
                                                 </div>
 
                                                 <div class="form-check mb-3 mr-4">
@@ -195,7 +195,7 @@
                                                         <label class="form-check-label" for="check_phonska">
                                                             Phonska
                                                         </label>
-                                                        <input placeholder="Jumlah" type="number" name="jumlah_phonska" value="{{ $item->jumlah_phonska }}" class="form-control">
+                                                        <input placeholder="Jumlah" type="text" name="jumlah_phonska" value="{{ $item->jumlah_phonska }}" class="form-control">
                                                 </div>
 
                                                 <div class="form-check mb-3 mr-4">
@@ -203,7 +203,7 @@
                                                         <label class="form-check-label" for="check_urea">
                                                             Urea
                                                         </label>
-                                                        <input placeholder="Jumlah" type="number" name="jumlah_urea" value="{{ $item->jumlah_urea }}" class="form-control">
+                                                        <input placeholder="Jumlah" type="text" name="jumlah_urea" value="{{ $item->jumlah_urea }}" class="form-control">
                                                 </div>
 
                                                 <div class="form-check mb-3 mr-4">
@@ -211,7 +211,7 @@
                                                         <label class="form-check-label" for="check_za">
                                                             ZA
                                                         </label>
-                                                        <input placeholder="Jumlah" type="number" name="jumlah_za" value="{{ $item->jumlah_za }}" class="form-control">
+                                                        <input placeholder="Jumlah" type="text" name="jumlah_za" value="{{ $item->jumlah_za }}" class="form-control">
                                                 </div>
 
                                                 <div class="form-check mb-3 mr-4">
@@ -219,7 +219,7 @@
                                                         <label class="form-check-label" for="check_zk">
                                                             ZK
                                                         </label>
-                                                        <input placeholder="Jumlah" type="number" name="jumlah_zk" value="{{ $item->jumlah_zk }}" class="form-control">
+                                                        <input placeholder="Jumlah" type="text" name="jumlah_zk" value="{{ $item->jumlah_zk }}" class="form-control">
                                                 </div>
 
                                                 <div class="form-check mb-3 mr-4">
@@ -227,7 +227,7 @@
                                                         <label class="form-check-label" for="check_kci">
                                                             KCI
                                                         </label>
-                                                        <input placeholder="Jumlah" type="number" name="jumlah_kci" value="{{ $item->jumlah_kci }}" class="form-control">
+                                                        <input placeholder="Jumlah" type="text" name="jumlah_kci" value="{{ $item->jumlah_kci }}" class="form-control">
                                                 </div>
 
                                                 <div class="form-check mb-3 mr-4">
@@ -236,7 +236,7 @@
                                                             Lainnya
                                                         </label>
                                                         <input type="text" placeholder="Keterangan" name="benih_lain" value="{{ $item->benih_lain }}" class="form-control mb-3">
-                                                        <input type="number" placeholder="Jumlah" name="jumlah_lain" value="{{ $item->jumlah_lain }}" class="form-control mb-3">
+                                                        <input type="text" placeholder="Jumlah" name="jumlah_lain" value="{{ $item->jumlah_lain }}" class="form-control mb-3">
                                                 </div>
 
                                             </div>

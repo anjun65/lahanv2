@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Request as RequestModel;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -27,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
         // Mail::send(new \App\Mail\SendEmailAfterTransactions());
 
         $dt = Carbon::now();
